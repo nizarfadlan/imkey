@@ -1,18 +1,18 @@
-import HomeLayout from '@/app/layouts'
-import Divisi from '@/components/Divisi'
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
+import RootLayout from '@/app/layout'
+import Divisi from '@/components/Root/Divisi'
+import Header from '@/components/Root/Header'
+import Hero from '@/components/Root/Hero'
 import BlurImage from '@/components/BlurImage'
 import { useRef } from 'react'
-import Agenda from '@/components/Agenda'
-import Pengurus from '@/components/Pengurus'
+import Agenda from '@/components/Root/Agenda'
+import Pengurus from '@/components/Root/Pengurus'
 
 export default function Home() {
   const aboutRef = useRef(null)
 
   return (
-    <HomeLayout>
-      <section id="home" className="hero relative bg-dark pt-24 lg:pt-18 pb-20 h-full overflow-hidden">
+    <RootLayout>
+      <section id="home" className="hero relative bg-white pt-24 lg:pt-18 mb-20 h-full overflow-hidden">
         <Hero servicesRef={aboutRef} />
       </section>
       <section id="divisi" className="mt-28 mb-16 mx-6 md:mx-24 lg:mx-36">
@@ -64,6 +64,6 @@ export default function Home() {
         <Header tipe="2" title="Pengurus" desc="Pengurus IMKEY periode 2021-2022." />
         <Pengurus />
       </section>
-    </HomeLayout>
+    </RootLayout>
   )
 }

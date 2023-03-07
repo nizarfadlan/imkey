@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 const Context = React.createContext({})
 
-export default function HomeProvider({ children }) {
+export default function Provider({ children }) {
   const [open, setOpen] = React.useState(false)
   const [sticky, setSticky] = React.useState(false)
   const router = useRouter()

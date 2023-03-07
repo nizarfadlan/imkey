@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { useState } from 'react'
 
 const BlurImage = (props) => {
@@ -30,8 +30,8 @@ const BlurImage = (props) => {
             height={props.height}
             loading="lazy"
             placeholder="blur"
-            // blurDataURL={`data:image/svg+xml;base64, ${loaded ? toBase64(shimmer(props.width, props.height)) : ''}`}
-            blurDataURL={props.srcImage}
+            blurDataURL={`data:image/svg+xml;base64, ${loaded ? toBase64(shimmer(props.width, props.height)) : ''}`}
+            // blurDataURL={props.srcImage}
             src={props.srcImage}
             alt={props.title}
             onLoadingComplete={() => setLoaded(true)}
