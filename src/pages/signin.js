@@ -68,6 +68,18 @@ export default function SignIn() {
     const email = emailInputRef.current.value
     const password = passwordInputRef.current.value
 
+    const result = await fetch(`${process.env.URL_API}/api/${process.env.VERSION_CURRENT}/auth/login`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: {
+        email,
+        password
+      }
+    })
+
     setLoading(false)
   }
 
